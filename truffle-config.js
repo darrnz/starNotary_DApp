@@ -21,13 +21,15 @@
  * phrase from a file you've .gitignored so it doesn't accidentally become public.
  *
  */
-
+require('dotenv').config()
 // const HDWallet = require('truffle-hdwallet-provider');
 // const infuraKey = "fj4jll3k.....";
 //
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
-
+const HDWalletProvider = require("truffle-hdwallet-provider")
+const mnemonic = process.env.MNEMONIC
+const infuraKey = process.env.INFURAKEY
 module.exports = {
   /**
    * Networks define how you connect to your ethereum client and let you set the
@@ -64,11 +66,12 @@ module.exports = {
 
     // Useful for deploying to a public network.
     // NB: It's important to wrap the provider as a function.
-    // ropsten: {
-      // provider: () => new HDWalletProvider(mnemonic, `https://ropsten.infura.io/${infuraKey}`),
-      // network_id: 3,       // Ropsten's id
-      // gas: 5500000,        // Ropsten has a lower block limit than mainnet
-      // confirmations: 2,    // # of confs to wait between deployments. (default: 0)
+    rinkeby: {
+      provider: () => new HDWalletProvider(mnemonic, `https://rinkeby.infura.io/v3/${infuraKey}`),
+      network_id: 4,       // Ropsten's id
+      gas: 5500000,        // Ropsten has a lower block limit than mainnet
+      gasPrice: 10000000000,
+      networkCheckTimeout: 1000000   // # of confs to wait between deployments. (default: 0)
       // timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
       // skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
     // },
@@ -78,19 +81,19 @@ module.exports = {
       // provider: () => new HDWalletProvider(mnemonic, `https://network.io`),
       // network_id: 2111,   // This network is yours, in the cloud.
       // production: true    // Treats this network as if it was a public net. (default: false)
-    // }
+    }
   },
 
   // Set default mocha options here, use special reporters etc.
   mocha: {
     enableTimeouts: false,
-    before_timeout: 520000
+    before_timeout: 10520000
   },
 
   // Configure your compilers
   compilers: {
     solc: {
-      version: "0.5.1",    // Fetch exact version from solc-bin (default: truffle's version)
+      //version: "0.5.1",    // Fetch exact version from solc-bin (default: truffle's version)
       // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
       // settings: {          // See the solidity docs for advice about optimization and evmVersion
       //  optimizer: {

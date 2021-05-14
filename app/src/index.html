@@ -25,7 +25,13 @@
       <br>
       <h1>Look up a Star</h1>
       <br><label for="name">Star ID:</label><input type="text" id="lookid"></input>
-      <br><br><button onclick="App.lookUp()">Look Up a Star</button>
+      <br><br><button id="lookUpStar" onclick="App.lookUp()">Look Up a Star</button>
+      <hr>
+      <br>
+      <h1>Transfer Star</h1>
+      <br><label for="starIdToSend">Star ID:</label><input type="text" id="starIdToSend"></input>
+      <br><label for="toAddress">Address to send:</label><input type="text" id="toAddress"></input>
+      <br><br><button id="transferStar" onclick="App.transferStar()">Send Star!</button>
       <hr>
       <br>
       <span id="status"></span>

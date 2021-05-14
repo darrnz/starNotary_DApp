@@ -1,14 +1,7 @@
 {
-  "dependencies": {
-    "openzeppelin-solidity": "2.3",
-    "truffle": "^5.3.5",
-    "truffle-hdwallet-provider": "^1.0.17",
-    "web3": "^1.2.1",
-    "webpack-dev-server": "^3.11.2"
-  },
   "name": "nd1309-p2-decentralized-star-notary-service-starter-code",
-  "description": "**PROJECT: Decentralized Star Notary Service Project** - For this project, you will create a DApp by adding functionality with your smart contract and deploy it on the public testnet.",
   "version": "1.0.0",
+  "description": "**PROJECT: Decentralized Star Notary Service Project** - For this project, you will create a DApp by adding functionality with your smart contract and deploy it on the public testnet.",
   "main": "truffle-config.js",
   "directories": {
     "test": "test"
@@ -18,12 +11,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/udacity/nd1309-p2-Decentralized-Star-Notary-Service-Starter-Code.git"
+    "url": "git+https://github.com/darrnz/starNotary_DApp.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/udacity/nd1309-p2-Decentralized-Star-Notary-Service-Starter-Code/issues"
+    "url": "https://github.com/darrnz/starNotary_DApp/issues"
   },
-  "homepage": "https://github.com/udacity/nd1309-p2-Decentralized-Star-Notary-Service-Starter-Code#readme"
+  "homepage": "https://github.com/darrnz/starNotary_DApp#readme",
+  "dependencies": {
+    "dotenv": "^9.0.2",
+    "openzeppelin-solidity": "^2.3.0",
+    "truffle": "^5.3.6",
+    "truffle-hdwallet-provider": "^1.0.2",
+    "web3": "^1.3.5",
+    "webpack-dev-server": "^3.11.2"
+  }
 }
