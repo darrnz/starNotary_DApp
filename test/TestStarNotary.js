@@ -105,7 +105,7 @@ it('can add the star name and star symbol properly', async() => {
     assert.equal(name, "RamonaToken");
     assert.equal(symbol,"RMT")
 });
-
+//0x497BBEEc2482d6d285549558790c58c0924Ac39F.
 
 it('lets a user transfer a star', async() => {
     // 1. create a Star with different tokenId
