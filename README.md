@@ -7,7 +7,7 @@
 
 ### Blockchain Information
 Contract Address on Rinkeby: 0x30eE8Fe8D0c8743F37C456C01baB01406BcE8D80
-Token: Ramona TokensV1
-Symbol: RMTsV1
+Token: Star Token
+Symbol: STC
 
 

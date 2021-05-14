@@ -102,8 +102,8 @@ it('can add the star name and star symbol properly', async() => {
     let symbol = await instance.symbol.call();
     await instance.createStar('new Star', starId, { from: user1 })
     //2. Call the name and symbol properties in your Smart Contract and compare with the name and symbol provided
-    assert.equal(name, "RamonaToken");
-    assert.equal(symbol,"RMT")
+    assert.equal(name, "Star Token");
+    assert.equal(symbol,"STC")
 });
 //0x497BBEEc2482d6d285549558790c58c0924Ac39F.
 
